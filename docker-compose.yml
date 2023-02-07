@@ -1,0 +1,7 @@
+version: "3"
+services:
+  sprint:
+    build: .
+    image: amazoncorretto:11-alpine3.17
+    ports:
+      - "8000:8000"
