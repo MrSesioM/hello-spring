@@ -11,7 +11,8 @@ pipeline {
             steps {
                 sh 'docker-compose build'
             }
-        } post {
+        }
+	post {
 		always {
 			junit 'target/surefire-reports/*.xml'
 		}
