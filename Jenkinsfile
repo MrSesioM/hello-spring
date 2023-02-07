@@ -12,12 +12,11 @@ pipeline {
                 sh 'docker-compose build'
             }
         }
-	post {
-		always {
-			junit 'target/surefire-reports/*.xml'
+		post {
+			always {
+				junit 'target/surefire-reports/*.xml'
+			}
 		}
-	}
-
 	stage('Deploy') {
             steps {
                 sh 'docker-compose up -d'
